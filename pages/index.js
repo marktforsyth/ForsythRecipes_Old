@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import Recipe from './recipe'
+
 import Recipes from '../data/recipes.json'
 
 class HomePage extends Component {
@@ -14,13 +16,10 @@ class HomePage extends Component {
   render() {
     if (this.state.selectedRecipe !== null) {
       return (
-        <div>
-        <Recipe data={Recipes[this.state.selectedRecipe]} />
-        <button onClick={() => this.setState({
-          selectedRecipe: null
-        })}>
-          To return home, click here
-        </button>
+        <div className='page-container'>
+          <div className='middle-column'>
+            <Recipe data={Recipes[this.state.selectedRecipe]} parentThis={this} />
+          </div>
         </div>
       )
     }
@@ -29,33 +28,23 @@ class HomePage extends Component {
 
     return (
       <div>
-
-        {recipeTitles.map(title => {
-          return <button key={title} onClick={() => this.setState({
-            selectedRecipe: title
-          })}>{title}</button>
-        })}
-      </div>
-    )
-  }
-}
-
-class Recipe extends Component {
-  render() {
-    return (
-      <div>
-        <h1>{this.props.data.title}</h1>
-        <pre>
-          {this.props.data.body}
-        </pre>
-        <div>Created by: {this.props.data.creator}</div>
-        <p>Created on: {this.props.data.created}</p>
-        <p>Last Edited on: {this.props.data.modified}</p>
+        <div className='page-container'>
+          <div className='middle-column'>
+            {recipeTitles.map(title => {
+              return (
+                <div className='recipe-button-container'>
+                  <button className='recipe-button' key={title} onClick={() => this.setState({
+                    selectedRecipe: title
+                  })}>{title}</button>
+                </div>
+              )
+            })}
+          </div>
+        </div>
       </div>
     )
   }
 }
 
 export default HomePage
-
 // Homework: spice up with css

@@ -1,0 +1,21 @@
+body {
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.page-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    margin-top: 5px;
+}
+
+.page-container > .middle-column {
+    width: 48%;
+    padding-left: 31px;
+}
+
+.page-container > .middle-column button {
+    font-family: inherit;
+}

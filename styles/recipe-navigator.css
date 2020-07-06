@@ -1,0 +1,33 @@
+.page-container > .middle-column > .recipe-button-container {
+    border-left: 2px solid transparent;
+    transition: 0.1s ease-in-out;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.page-container > .middle-column > .recipe-button-container:hover {
+    border-left: 2px solid #ac9200;
+}
+
+.page-container > .middle-column > .recipe-button-container > .recipe-button {
+    color: rgb(70, 70, 70);
+    background-color: white;
+    border: 1px solid transparent;
+    margin-left: 20px;
+    padding: 7px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    transition: 0.1s ease-in-out;
+    width: 100%;
+    text-align: left;
+}
+
+.page-container > .middle-column > .recipe-button-container > .recipe-button:active,.page-container > .middle-column div > .recipe-button:focus {
+    outline: none;
+}
+
+.page-container > .middle-column > .recipe-button-container > .recipe-button:hover {
+    color: #ac9200;
+}

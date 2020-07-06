@@ -1,0 +1,47 @@
+.page-container > .middle-column pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    font-family: inherit;
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+.page-container > .middle-column p {
+    line-height: 0.62;
+    font-size: 0.92rem;
+    font-weight: 300;
+}
+
+.page-container > .middle-column h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.5rem;
+}
+
+.page-container > .middle-column div > .return-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.39rem;
+    border: 1px solid transparent;
+    background-color: white;
+    transition: 0.2s ease-in-out;
+    padding: 7px 9px;
+}
+
+.page-container > .middle-column div > .return-button:hover {
+    color: #ad9300;
+    letter-spacing: 0.8px;
+}
+
+.page-container > .middle-column div > .return-button:active, .page-container > .middle-column div > .return-button:focus {
+    outline: none;
+}
+
+.page-container > .middle-column div > .return-button > .return-home-text {
+    margin-left: 10px;
+}
